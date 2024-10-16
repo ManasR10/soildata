@@ -1,0 +1,219 @@
+/* Main dashboard container */
+.dashboard {
+  padding: 20px;
+  background-color: #f0f2f5;
+}
+
+/* Dashboard title styling */
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Summary section for displaying the latest values */
+.summary {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  /* Increased padding for better spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 22%;
+  /* Adjusted card width */
+  margin: 10px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-8px);
+  /* Increased hover lift */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  /* Stronger shadow on hover */
+}
+
+/* Card title styling */
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  /* Slightly increased font size */
+  font-weight: 500;
+  color: #444;
+}
+
+/* Card value styling */
+.card p {
+  font-size: 1.2rem;
+  /* Increased value font size */
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Main section to display chart and table side by side */
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Chart container styling */
+.chart-container {
+  width: 55%;
+  /* Chart takes 65% width */
+  background-color: #fff;
+  padding: 30px;
+  /* More padding for spacing */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Smooth transition for chart responsiveness */
+.chart-container canvas {
+  width: 100% !important;
+  height: auto !important;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Table container styling */
+.veggies-table {
+  width: 80%;
+  margin: auto;
+  /* Table takes 30% width */
+  background-color: white;
+  border-collapse: collapse;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Table styling */
+.veggies-table table {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.veggies-table th,
+.veggies-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.veggies-table th {
+  background-color: #f4f4f4;
+  font-size: 1.1rem;
+}
+
+.veggies-table td {
+  font-size: 1rem;
+}
+
+.veggies-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive adjustments for tablet view */
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+  }
+
+  .chart-container,
+  .veggies-table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+/* Responsive adjustments for mobile view */
+@media (max-width: 576px) {
+  .card {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2rem;
+    /* Adjusted font size for smaller screens */
+  }
+
+  .chart-container,
+  .veggies-table {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* Averages section for displaying filtered values */
+.averages {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.averages .card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  /* Match with the summary cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 22%;
+  /* Same width as summary cards */
+  margin: 10px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Hover effect for averages cards */
+.averages .card:hover {
+  transform: translateY(-8px);
+  /* Slightly stronger hover lift */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  /* Stronger hover shadow */
+}
+
+/* Responsive adjustments for averages section */
+@media (max-width: 768px) {
+  .averages .card {
+    width: 45%;
+    /* Adjusted width for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .averages .card {
+    width: 90%;
+    /* Full width for small screens */
+  }
+}
+
+.refresh-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.refresh-button:hover {
+  background-color: #0056b3;
+}
